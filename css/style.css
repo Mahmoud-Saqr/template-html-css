@@ -102,12 +102,11 @@ p {
     *+> BUTTON
 ====================== */
 .btn {
-    color: #333;
-    border: 2px solid #333;
-    color: #333;
+    border: 2px solid #999;
+    color: #777;
     text-transform: uppercase;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: 8px 18px;
     width: fit-content;
     margin: 2rem 0;
@@ -119,31 +118,13 @@ p {
     background-color: #3898F5;
     color: #FFF;
 }
-/* ======================
-    *+> SPECAIL HEADING
-====================== */
-/* .special_heading {
-    text-align: center;
-    padding: 0 40px 40px;
+@media only screen and (max-width: 768px) {
+    .btn {
+        font-size: 1.2rem;
+        padding: 6px 14px;
+    }
 }
-.special_heading h1 {
-    font-size: ;
-    font-weight: ;
-    position: relative;
-    padding: ;
-    text-transform: uppercase;
-    transition: ;
-    width: fit-content;
-    margin: 15px auto;
-}
-.special_heading p {
-    font-size: ;
-    margin: 0 auto;
-    max-width: 800px;
-    line-height: 25px;
-    font-weight: ;
-    color: ;
-} */
+
 /* ======================
     *+> CLEAR FLOAT
 ====================== */
@@ -253,6 +234,17 @@ p {
     background-color: transparent;
     color: #FFF;
 }
+@media only screen and (max-width: 768px) {
+    .header .slider .intro h2 {
+        font-size: 3.5rem;
+    }
+    .header .slider .intro p {
+        font-size: 1rem;
+    }
+    .header .slider .intro .btn {
+        font-size: 1rem;
+    }
+}
 /*===================================*\
 # START FEATURES
 \*===================================*/
@@ -280,6 +272,7 @@ p {
 @media only screen and (max-width: 768px) {
     .features .feat {
         width: 100%;
+        margin: 20px 0;
     }
 }
 /*===================================*\
@@ -349,9 +342,6 @@ p {
 @media only screen and (max-width: 762px) {
     .about-me .content {
         width: 100%;
-    }
-    .about-me .content .icon {
-        width: 10%;
     }
 }
 
@@ -650,7 +640,11 @@ p {
     background-color: #EEE;
     color: #3898F5;
     text-align: center;
-    padding: 5rem 0;
+    padding: 2rem 0;
+}
+.footer h4,
+.footer ul {
+    width: 50%;
 }
 .footer h4 {
     float: left;
@@ -666,4 +660,11 @@ p {
 }
 .footer ul li i:hover {
     color: #999;
+}
+@media only screen and (max-width: 768px) {
+    .footer h4,
+    .footer ul {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
