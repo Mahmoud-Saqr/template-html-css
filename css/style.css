@@ -60,6 +60,10 @@ p {
     color: #777;
     font-size: 1.5rem;
 }
+hr {
+    border: 1px solid #EEE;
+    border-radius: 25px;
+}
 
 /*===================================*\
 # REUSED STYLE
@@ -144,7 +148,6 @@ p {
     top: 0;
     width: 100%;
     z-index: 99999;
-    padding: 1rem 0;
 }
 .header .navbar .container {
     display: flex;
@@ -154,7 +157,7 @@ p {
 .header .navbar .logo {
     color: #3898F5;
     font-size: 2.6rem;
-    padding: 0;
+    padding: 0.8rem 0;
 }
 .header .navbar ul {
     overflow: hidden;
@@ -178,15 +181,53 @@ p {
 .header .navbar ul li:hover {
     color: #3898F5
 }
-
-@media only screen and (max-width: 768px) {
-    .header .navbar ul {
-        display: none;
-    }
-    .header .navbar .container {
+.header .navbar .side {
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .navbar .side .search_icon svg,
+.header .navbar .side .profile_icon svg {
+    border-left: 1px solid #DDD;
+    padding: 1.2rem;
+    cursor: pointer;
+}
+.header .navbar .side .search_icon:hover,
+.header .navbar .side .profile_icon:hover {
+    color: #3898F5;
+}
+.header .navbar .side .signup {
+    text-transform: uppercase;
+    color: #3898F5;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.header .navbar .side .search_icon {
+    margin: 0 2rem;
+}
+@media only screen and (max-width: 992px) {
+    .header .navbar ul.list {
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        z-index: 999;
+        background-color: #FFF;
+        display: flex;
         justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 1rem;
+    }
+    .header .navbar ul li {
+        padding: .8rem;
+    }
+    .header .navbar ul li a {
+        font-size: 1.2rem;
     }
 }
+
 /* ======================
     *+> SLIDER
 ====================== */
@@ -195,7 +236,7 @@ p {
     background-image: url('../image/slider.jpg');
     background-attachment: fixed;
     background-size: cover;
-    height: calc(100vh - 67px);
+    height: calc(100vh - 6.8px);
 }
 .header .slider::before {
     position: absolute;
@@ -245,6 +286,7 @@ p {
         font-size: 1rem;
     }
 }
+
 /*===================================*\
 # START FEATURES
 \*===================================*/
@@ -275,6 +317,7 @@ p {
         margin: 20px 0;
     }
 }
+
 /*===================================*\
 # START ABOUT ME
 \*===================================*/
@@ -638,33 +681,56 @@ p {
 \*===================================*/
 .footer {
     background-color: #EEE;
+    padding: 5rem 0;
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer .logo {
+    padding: 1rem 0;
+    font-size: 3rem;
     color: #3898F5;
-    text-align: center;
-    padding: 2rem 0;
 }
-.footer h4,
-.footer ul {
-    width: 50%;
+.footer .list,
+.footer .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
 }
-.footer h4 {
-    float: left;
-}
-.footer ul {
-    list-style: none;
-    float: right;
-}
-.footer ul li {
-    display: inline-block;
-    font-size: 20px;
+.footer .list li {
+    font-size: 1.7rem;
     margin-left: 1rem;
 }
-.footer ul li i:hover {
-    color: #999;
+.footer .social li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #FFF;
+    width: 30px;
+    height: 30px;
+    background-color: #3898F5;
+    border: 1px solid #3898F5;
+    border-radius: 50%;
+}
+.footer .social li:hover {
+    background-color: #FFF;
+    color: #3898F5;
+}
+.footer .copyright {
+    font-size: 1.5rem;
+    text-align: right;
+    width: 50%;
 }
 @media only screen and (max-width: 768px) {
-    .footer h4,
-    .footer ul {
-        width: 100%;
-        margin-bottom: 1rem;
+    .footer .container-1,
+    .footer .container-2  {
+        justify-content: center;
     }
 }
