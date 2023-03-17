@@ -1,0 +1,669 @@
+/* ==========================================================================
+    *+> Google Font-Family
+========================================================================== */
+@font-face {
+    font-family: Montserrat;
+    src: url('../lib/fontgoogle/Montserrat-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: Cairo;
+    src: url('../lib/fontgoogle/Cairo-VariableFont_slnt\,wght.ttf');
+}
+
+/*===================================*\
+# MAIN STYLE
+\*===================================*/
+* {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #FFF;
+    color: #333;
+    font-size: 1.6rem;
+    line-height: 1.8;
+}
+a,
+img,
+span,
+input,
+button,
+svg.fa-icon { display: block; }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+input {
+    width: 100%;
+    outline: none;
+}
+ul { list-style: none; }
+span { display: inline-block; }
+p {
+    color: #777;
+    font-size: 1.5rem;
+}
+
+/*===================================*\
+# REUSED STYLE
+\*===================================*/
+/* ======================
+    *+> CONTAINER
+====================== */
+.container {
+    padding: 0;
+    margin: auto;
+    max-width: 1200px;
+}
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 360px;
+    }
+}
+@media only screen and (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* ======================
+    *+> BUTTON
+====================== */
+.btn {
+    color: #333;
+    border: 2px solid #333;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    width: fit-content;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.btn:is(:hover) {
+    border: 2px solid #3898F5;
+    background-color: #3898F5;
+    color: #FFF;
+}
+/* ======================
+    *+> SPECAIL HEADING
+====================== */
+/* .special_heading {
+    text-align: center;
+    padding: 0 40px 40px;
+}
+.special_heading h1 {
+    font-size: ;
+    font-weight: ;
+    position: relative;
+    padding: ;
+    text-transform: uppercase;
+    transition: ;
+    width: fit-content;
+    margin: 15px auto;
+}
+.special_heading p {
+    font-size: ;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 25px;
+    font-weight: ;
+    color: ;
+} */
+/* ======================
+    *+> CLEAR FLOAT
+====================== */
+.clearfix {clear:both}
+
+/*===================================*\
+# SATART HEADER
+\*===================================*/
+/* ======================
+    *+> NAVBAR
+====================== */
+.header .navbar {
+    background-color: #FFF;
+    color: #FFF;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    padding: 1rem 0;
+}
+.header .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .navbar .logo {
+    color: #3898F5;
+    font-size: 2.6rem;
+    padding: 0;
+}
+.header .navbar ul {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header .navbar ul li {
+    padding-left: 1.2rem;
+}
+.header .navbar ul li a {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.header .navbar ul li a:hover {
+    color: #3898F5
+}
+.header .navbar ul li:hover {
+    color: #3898F5
+}
+
+@media only screen and (max-width: 768px) {
+    .header .navbar ul {
+        display: none;
+    }
+    .header .navbar .container {
+        justify-content: center;
+    }
+}
+/* ======================
+    *+> SLIDER
+====================== */
+.header .slider {
+    position: relative;
+    background-image: url('../image/slider.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: calc(100vh - 67px);
+}
+.header .slider::before {
+    position: absolute;
+    content: '';
+    background-color: rgb(51 51 51 / 50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.header .slider .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .slider .intro {
+    position: absolute;
+    text-align: center;
+    color: #FFF;
+}
+.header .slider .intro h2 {
+    font-size: 5rem;
+    font-weight: 500;
+    color: #FFF;
+}
+.header .slider .intro p {
+    color: #DDD;
+}
+.header .slider .intro .btn {
+    margin: 2rem auto;
+    background-color: #FFF;
+    border: 1px solid #FFF;
+}
+.header .slider .intro .btn:hover {
+    background-color: transparent;
+    color: #FFF;
+}
+/*===================================*\
+# START FEATURES
+\*===================================*/
+.features {
+    padding: 80px 0;
+    overflow: hidden;
+}
+.features .feat {
+    text-align: center;
+    float: left;
+    width: 30%;
+    padding: 30px 10px;
+    border: 1px solid #DDD;
+    margin: 20px 10px;
+}
+.features .feat h1 {
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+.features .feat p {
+    color: #777;
+}
+@media only screen and (max-width: 768px) {
+    .features .feat {
+        width: 100%;
+    }
+}
+/*===================================*\
+# START ABOUT ME
+\*===================================*/
+.about-me {
+    padding: 80px 0;
+    overflow: hidden;
+    background-color: #EEE;
+}
+.about-me .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-me .about-img {
+    flex-basis: 30%;
+    margin-right: 6rem;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.about-me .about-info {
+    flex-basis: 55%;
+}
+
+.about-me .about-info p:last-of-type {
+    padding: 1rem 0;
+}
+.about-me .about-info .hobbies {
+    margin: 40px 0;
+}
+.about-me .content {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    margin: 1.5rem 0;
+}
+.about-me .content .icon {
+    float: left;
+    width: 20%;
+    padding-top: 1rem;
+}
+.about-me .content .icon svg {
+    color: #777;
+    font-size: 3rem;
+}
+.about-me .content .text {
+    float: left;
+    width: 80%;
+}
+.about-me .content .text p {
+    padding: 0;
+}
+@media only screen and (max-width: 992px) {
+    .about-me .container {
+        flex-direction: column;
+    }
+    .about-me .about-img {
+        margin-right: 0;
+    }
+    .about-me .about-info {
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 762px) {
+    .about-me .content {
+        width: 100%;
+    }
+    .about-me .content .icon {
+        width: 10%;
+    }
+}
+
+/*===================================*\
+# START MY SKILLS
+\*===================================*/
+.my-skills {
+    padding: 80px 0;
+    overflow: hidden;
+}
+.my-skills .skills,
+.my-skills .progress {
+    width: 45%;
+}
+.my-skills .skills {
+    float: left;
+    margin-right: 5%;
+}
+.my-skills .skills h2 {
+    padding-bottom: 1rem;
+}
+.my-skills .skills p {
+    padding-bottom: 1rem;
+}
+.my-skills .progress {
+    float: left;
+}
+.my-skills .progress .rate h3 {
+    font-size: 17px;
+    padding: 10px 0 10px 0;
+}
+.my-skills .progress .rate .prog,
+.my-skills .progress .rate .prog span {
+    height: 20px;
+}
+.my-skills .progress .rate .prog {
+    background-color: #DDD;
+    width: 100%;
+}
+.my-skills .progress .rate .prog span {
+    background-color: #3898F5;
+    text-align: right;
+    color: #FFF;
+    padding-right: 10px;
+    font-size: 1.2rem;
+}
+@media only screen and (max-width: 762px) {
+    .my-skills .skills,
+    .my-skills .progress {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+/*===================================*\
+# START RESUME
+\*===================================*/
+.resume{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 80px 0;
+}
+.resume p{
+    text-align: center;
+    padding: 20px 0 5px 0
+}
+.resume .btn {
+    margin: 2rem auto;
+}
+
+/*===================================*\
+# START RESUME
+\*===================================*/
+.my-education {
+    overflow: hidden;
+    padding: 80px 0;
+}
+.my-education h2, h3 {
+    padding-bottom: 1.5rem;
+}
+.my-education p {
+    padding-bottom: 1rem;
+}
+.my-education hr {
+    margin: 20px 0 30px 0;
+}
+.my-education .main,
+.my-education .exp {
+    width: 48%;
+}
+.my-education .main {
+    float: left;
+}
+.my-education .exp {
+    float: left;
+    margin-left: 4%;
+}
+.my-education .exp span {
+    display: block;
+    margin-bottom: 10px;
+}
+.my-education .exp span:first-of-type {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.my-education .exp span:last-of-type {
+    display: inline-block;
+    background-color: #3898F5;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 4px 14px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.my-education .exp hr {
+    margin: 10px 0;
+}
+.my-education .exp p {
+    margin-bottom: 10px;
+}
+@media only screen and (max-width: 762px) {
+    .my-education .main,
+    .my-education .exp {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+/*===================================*\
+# START TESTIMONIALS
+\*===================================*/
+.testimonials {
+    background-color: #EEE;
+    text-align: center;
+    padding: 80px 0;
+}
+.testimonials h3 {
+    padding-top: 2rem;
+}
+.testimonials .point,
+.testimonials .point.active {
+    height: 12px;
+    width: 12px;
+    margin: auto;
+    display: inline-block;
+    border: 1px solid #3898F5;
+}
+.testimonials .point:hover {
+    background-color: #3898F5;
+}
+.testimonials .point.active {
+    background-color: #3898F5;
+    margin: 0 1rem;
+}
+
+/*===================================*\
+# START PORTOFOLIO
+\*===================================*/
+.portofolio {
+    padding: 80px 0;
+    overflow: hidden;
+}
+.portofolio h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.portofolio p {
+    text-align: center;
+}
+.portofolio .images {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.portofolio .images .img {
+    flex-basis: 31%;
+    margin: 0.6rem 0.3rem;
+    padding: 3px;
+    border: 1px solid #DDD;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.portofolio .images .img img {
+    border-radius: 2px;
+}
+.portofolio .images .img:hover {
+    opacity: 0.9;
+}
+@media only screen and (max-width: 762px) {
+    .portofolio .images .img {
+        flex-basis: 48%;
+    }
+}
+@media only screen and (max-width: 552px) {
+    .portofolio .images .img {
+        flex-basis: 100%;
+    }
+}
+
+/*===================================*\
+# START CONTACT ME
+\*===================================*/
+.contact {
+    background-color: #3898F5;
+    padding: 80px 0;
+    overflow: hidden;
+}
+.contact h2 {
+    color: #FFF;
+    padding-bottom: 2rem;
+}
+.contact p {
+    color: #EEE;
+    line-height: 1.7;
+    padding: 0 0 10px 0;
+}
+.contact .contact-info {
+    float: left;
+    width: 40%;
+}
+.contact .contact-form {
+    float: left;
+    width: 50%;
+}
+.contact .contact-form {
+    padding-top: 54px;
+    margin-left: 5%;
+}
+.contact .contact-form .first-name,
+.contact .contact-form .last-name {
+    width: 48%;
+}
+.contact .contact-form .first-name input[type="text"],
+.contact .contact-form .last-name input[type="text"] {
+    width: 100%;
+}
+.contact .contact-form .first-name {
+    float: left;
+}
+.contact .contact-form .last-name {
+    float: right;
+}
+.contact .contact-form label {
+    display: block;
+    color: #EEE;
+    margin-bottom: 10px;
+}
+.contact .contact-form input[type="text"],
+.contact .contact-form textarea {
+    background-color: transparent;
+    border: 1px solid #EEE;
+    color: #EEE;
+    border-radius: 2px;
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.contact .contact-form input[type="text"] {
+    height: 40px;
+}
+.contact .contact-form textarea {
+    height: 100px;
+}
+.contact .contact-form .btn {
+    border: 1px solid #EEE;
+    color: #EEE;
+}
+.contact .contact-form .btn:hover {
+    background-color: #FFF;
+    border: 1px solid #EEE;
+    color: #3898F5;
+}
+@media only screen and (max-width: 762px) {
+    .contact .contact-info,
+    .contact .contact-form {
+        width: 100%;
+    }
+    .contact .contact-form {
+        margin: 1rem 0;
+    }
+    .contact .contact-form .first-name,
+    .contact .contact-form .last-name {
+        width: 100%;
+    }
+}
+
+/*===================================*\
+# START FOOTER
+\*===================================*/
+.footer {
+    background-color: #EEE;
+    color: #3898F5;
+    text-align: center;
+    padding: 5rem 0;
+}
+.footer h4 {
+    float: left;
+}
+.footer ul {
+    list-style: none;
+    float: right;
+}
+.footer ul li {
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 1rem;
+}
+.footer ul li i:hover {
+    color: #999;
+}
