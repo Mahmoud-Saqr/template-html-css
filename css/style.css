@@ -78,7 +78,7 @@ hr {
 }
 @media only screen and (max-width: 576px) {
     .container {
-        max-width: 360px;
+        max-width: 370px;
     }
 }
 @media only screen and (min-width: 576px) {
@@ -98,7 +98,7 @@ hr {
 }
 @media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1140px;
+        max-width: 1200px;
     }
 }
 
@@ -732,5 +732,8 @@ hr {
     .footer .container-1,
     .footer .container-2  {
         justify-content: center;
+    }
+    .footer .copyright {
+        text-align: center;
     }
 }
