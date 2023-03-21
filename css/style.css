@@ -236,7 +236,7 @@ hr {
     background-image: url('../image/slider.jpg');
     background-attachment: fixed;
     background-size: cover;
-    height: calc(100vh - 6.8px);
+    height: calc(100vh - 62.8px);
 }
 .header .slider::before {
     position: absolute;
